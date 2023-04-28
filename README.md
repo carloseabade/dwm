@@ -10,6 +10,7 @@ As this is my own build, I've added some patches to it.
 - [centeredmaster](https://dwm.suckless.org/patches/centeredmaster/). Edited: Added centeredfloatingmaster only.
 - [doublepressquit](https://dwm.suckless.org/patches/doublepressquit/).
 - [fakefullscreen](https://dwm.suckless.org/patches/fakefullscreen/).
+- [movestack](https://dwm.suckless.org/patches/movestack/).
 
 ## Requirements
 
