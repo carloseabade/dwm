@@ -8,6 +8,7 @@ As this is my own build, I've added some patches to it.
 
 - [bottomstack](https://dwm.suckless.org/patches/bottomstack/). Edited: Added bstack only.
 - [centeredmaster](https://dwm.suckless.org/patches/centeredmaster/). Edited: Added centeredfloatingmaster only.
+- [doublepressquit](https://dwm.suckless.org/patches/doublepressquit/).
 
 ## Requirements
 
