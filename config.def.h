@@ -10,7 +10,6 @@ static const char dmenufont[]       = "Liberation Mono:pixelsize=12:antialias=tr
 static const char col_yellow[]      = "#f2ac57";
 static const char col_navy_blue[]   = "#011126";
 static const char col_dark_red[]    = "#59121f";
-static const char col_red[]         = "#8c3041";
 static const char *colors[][3]      = {
 	/*               fg          bg             border   */
 	[SchemeNorm] = { col_yellow, col_navy_blue, col_navy_blue },
