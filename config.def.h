@@ -7,13 +7,18 @@ static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const char *fonts[]          = { "Liberation Mono:pixelsize=12:antialias=true:autohint=true" };
 static const char dmenufont[]       = "Liberation Mono:pixelsize=12:antialias=true:autohint=true";
-static const char col_yellow[]      = "#f2ac57";
-static const char col_navy_blue[]   = "#011126";
-static const char col_dark_red[]    = "#59121f";
+static const char col_orange[]      = "#fe8019";
+static const char col_bg2[]         = "#282828";
+static const char col_bg4[]         = "#7c6f64";
 static const char *colors[][3]      = {
 	/*               fg          bg             border   */
-	[SchemeNorm] = { col_yellow, col_navy_blue, col_navy_blue },
-	[SchemeSel]  = { col_yellow, col_dark_red,  col_yellow },
+	[SchemeNorm] = { col_bg2, col_orange, col_navy_blue },
+	[SchemeSel]  = { "#00ff00", "#ff0000",  col_orange },
+  [SchemeStatus]  = { col_bg2, col_orange,  "#000000"  }, // Statusbar right {text,background,not used but cannot be empty}
+  [SchemeTagsSel]  = { col_bg2, col_orange,  "#000000"  }, // Tagbar left selected {text,background,not used but cannot be empty}
+  [SchemeTagsNorm]  = { col_bg4, col_bg2,  "#000000"  }, // Tagbar left unselected {text,background,not used but cannot be empty}
+  [SchemeInfoSel]  = { col_bg2, col_bg4,  "#000000"  }, // infobar middle  selected {text,background,not used but cannot be empty}
+  [SchemeInfoNorm]  = { col_bg4, col_bg2,  "#000000"  }, // infobar middle  unselected {text,background,not used but cannot be empty}
 };
 
 /* tagging */
@@ -60,7 +65,7 @@ static const Layout layouts[] = {
 
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
-static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_navy_blue, "-nf", col_yellow, "-sb", col_dark_red, "-sf", col_yellow, NULL };
+static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_bg2, "-nf", col_bg4, "-sb", col_orange, "-sf", col_bg2, NULL };
 static const char *termcmd[]  = { "st", NULL };
 static const char *slock[]    = { "slock", NULL };
 
