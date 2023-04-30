@@ -12,6 +12,7 @@ As this is my own build, I've added some patches to it.
 - [fakefullscreen](https://dwm.suckless.org/patches/fakefullscreen/).
 - [movestack](https://dwm.suckless.org/patches/movestack/).
 - [sticky](https://dwm.suckless.org/patches/sticky/).
+- [noborder](http://dwm.suckless.org/patches/noborder/). Edited: Added noborderfloatingfix-6.2 only.
 
 ## Requirements
 
