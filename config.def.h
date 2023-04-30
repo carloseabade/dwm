@@ -12,7 +12,7 @@ static const char col_bg2[]         = "#282828";
 static const char col_bg4[]         = "#7c6f64";
 static const char *colors[][3]      = {
 	/*               fg          bg             border   */
-	[SchemeNorm] = { col_bg2, col_orange, col_navy_blue },
+	[SchemeNorm] = { col_bg2, col_orange, col_bg2 },
 	[SchemeSel]  = { "#00ff00", "#ff0000",  col_orange },
   [SchemeStatus]  = { col_bg2, col_orange,  "#000000"  }, // Statusbar right {text,background,not used but cannot be empty}
   [SchemeTagsSel]  = { col_bg2, col_orange,  "#000000"  }, // Tagbar left selected {text,background,not used but cannot be empty}
