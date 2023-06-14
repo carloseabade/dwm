@@ -13,6 +13,7 @@ As this is my own build, I've added some patches to it.
 - [movestack](https://dwm.suckless.org/patches/movestack/).
 - [sticky](https://dwm.suckless.org/patches/sticky/).
 - [colorbar](https://dwm.suckless.org/patches/colorbar/)
+- [removeborder](https://dwm.suckless.org/patches/removeborder/)
 
 ## Requirements
 
