@@ -43,6 +43,7 @@
 
 #include "drw.h"
 #include "util.h"
+#include <time.h>
 
 /* macros */
 #define BUTTONMASK              (ButtonPressMask|ButtonReleaseMask)
@@ -1686,6 +1687,20 @@ spawn(const Arg *arg)
 
 	if (arg->v == dmenucmd)
 		dmenumon[0] = '0' + selmon->num;
+	if (arg->v == maim) {
+    time_t t = time(NULL);
+    struct tm date = *localtime(&t);
+    char filename[57];
+    sprintf(filename, "/home/carlos/Pictures/Screenshots/%d-%02d-%02d-%02d-%02d-%02d.png", date.tm_year + 1900, date.tm_mon + 1, date.tm_mday, date.tm_hour, date.tm_min, date.tm_sec);
+    ((char **)arg->v)[2] = filename;
+  }
+	if (arg->v == maimsel) {
+    time_t t = time(NULL);
+    struct tm date = *localtime(&t);
+    char filename[57];
+    sprintf(filename, "/home/carlos/Pictures/Screenshots/%d-%02d-%02d-%02d-%02d-%02d.png", date.tm_year + 1900, date.tm_mon + 1, date.tm_mday, date.tm_hour, date.tm_min, date.tm_sec);
+    ((char **)arg->v)[3] = filename;
+  }
 	if (fork() == 0) {
 		if (dpy)
 			close(ConnectionNumber(dpy));

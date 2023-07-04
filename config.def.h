@@ -68,12 +68,16 @@ static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() 
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_bg2, "-nf", col_bg4, "-sb", col_orange, "-sf", col_bg2, NULL };
 static const char *termcmd[]  = { "st", NULL };
 static const char *slock[]    = { "slock", NULL };
+static const char *maim[]     = { "maim", "--hidecursor", "FILEPATH changed on spawn function", NULL };
+static const char *maimsel[]  = { "maim", "--hidecursor", "--select", "FILEPATH changed on spawn function", NULL };
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY|ShiftMask,             XK_l,      spawn,          {.v = slock } },
+	{ MODKEY,                       XK_Print,  spawn,          {.v = maim } },
+	{ MODKEY|ShiftMask,             XK_Print,  spawn,          {.v = maimsel } },
 	{ MODKEY|ShiftMask,             XK_h,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
