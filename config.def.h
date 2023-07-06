@@ -1,24 +1,24 @@
 /* See LICENSE file for copyright and license details. */
 
 /* appearance */
-static const unsigned int borderpx  = 2;        /* border pixel of windows */
+static const unsigned int borderpx  = 1;        /* border pixel of windows */
 static const unsigned int snap      = 10;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const char *fonts[]          = { "Liberation Mono:pixelsize=12:antialias=true:autohint=true" };
 static const char dmenufont[]       = "Liberation Mono:pixelsize=12:antialias=true:autohint=true";
-static const char col_orange[]      = "#fe8019";
-static const char col_bg2[]         = "#282828";
-static const char col_bg4[]         = "#7c6f64";
+static const char col_white[]       = "#dddddd";
+static const char col_red[]         = "#a21212";
+static const char col_gray[]          = "#212320";
 static const char *colors[][3]      = {
 	/*               fg          bg             border   */
-	[SchemeNorm] = { col_bg2, col_orange, col_bg2 },
-	[SchemeSel]  = { "#00ff00", "#ff0000",  col_orange },
-  [SchemeStatus]  = { col_bg2, col_orange,  "#000000"  }, // Statusbar right {text,background,not used but cannot be empty}
-  [SchemeTagsSel]  = { col_bg2, col_orange,  "#000000"  }, // Tagbar left selected {text,background,not used but cannot be empty}
-  [SchemeTagsNorm]  = { col_bg4, col_bg2,  "#000000"  }, // Tagbar left unselected {text,background,not used but cannot be empty}
-  [SchemeInfoSel]  = { col_bg2, col_bg4,  "#000000"  }, // infobar middle  selected {text,background,not used but cannot be empty}
-  [SchemeInfoNorm]  = { col_bg4, col_bg2,  "#000000"  }, // infobar middle  unselected {text,background,not used but cannot be empty}
+	[SchemeNorm] = { col_white, col_gray,  col_gray },
+	[SchemeSel]  = { col_white, col_red,  col_red },
+  [SchemeStatus]  = { col_white, col_gray,  "#000000"  }, // Statusbar right {text,background,not used but cannot be empty}
+  [SchemeTagsSel]  = { col_white, col_red,  "#000000"  }, // Tagbar left selected {text,background,not used but cannot be empty}
+  [SchemeTagsNorm]  = { col_white, col_gray,  "#000000"  }, // Tagbar left unselected {text,background,not used but cannot be empty}
+  [SchemeInfoSel]  = { col_white, col_red,  "#000000"  }, // infobar middle  selected {text,background,not used but cannot be empty}
+  [SchemeInfoNorm]  = { col_white, col_red, "#000000"  }, // infobar middle  unselected {text,background,not used but cannot be empty}
 };
 
 /* tagging */
@@ -65,7 +65,7 @@ static const Layout layouts[] = {
 
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
-static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_bg2, "-nf", col_bg4, "-sb", col_orange, "-sf", col_bg2, NULL };
+static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray, "-nf", col_white, "-sb", col_red, "-sf", col_white, "-c", "-l", "10", NULL };
 static const char *termcmd[]  = { "st", NULL };
 static const char *slock[]    = { "slock", NULL };
 static const char *maim[]     = { "maim", "--hidecursor", "FILEPATH changed on spawn function", NULL };
