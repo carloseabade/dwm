@@ -17,8 +17,8 @@ static const char *colors[][3]      = {
   [SchemeStatus]  = { col_white, col_gray,  "#000000"  }, // Statusbar right {text,background,not used but cannot be empty}
   [SchemeTagsSel]  = { col_white, col_red,  "#000000"  }, // Tagbar left selected {text,background,not used but cannot be empty}
   [SchemeTagsNorm]  = { col_white, col_gray,  "#000000"  }, // Tagbar left unselected {text,background,not used but cannot be empty}
-  [SchemeInfoSel]  = { col_white, col_red,  "#000000"  }, // infobar middle  selected {text,background,not used but cannot be empty}
-  [SchemeInfoNorm]  = { col_white, col_red, "#000000"  }, // infobar middle  unselected {text,background,not used but cannot be empty}
+  [SchemeInfoSel]  = { col_white, col_gray,  "#000000"  }, // infobar middle  selected {text,background,not used but cannot be empty}
+  [SchemeInfoNorm]  = { col_white, col_gray, "#000000"  }, // infobar middle  unselected {text,background,not used but cannot be empty}
 };
 
 /* tagging */
