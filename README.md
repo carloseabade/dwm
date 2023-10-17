@@ -6,7 +6,6 @@ dwm is an extremely fast, small, and dynamic window manager for X. It's one of s
 
 As this is my own build, I've added some patches to it.
 
-- [bottomstack](https://dwm.suckless.org/patches/bottomstack/). Edited: Added bstack only.
 - [doublepressquit](https://dwm.suckless.org/patches/doublepressquit/).
 - [fakefullscreen](https://dwm.suckless.org/patches/fakefullscreen/).
 - [movestack](https://dwm.suckless.org/patches/movestack/).
